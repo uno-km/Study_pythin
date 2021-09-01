@@ -1,0 +1,7 @@
+score_file = open("score.txt", "w", encoding="utf8")
+print("math  : 30", file=score_file)
+print("english  : 50", file=score_file)
+score_file.close()
+score_file = open("score.txt", "a", encoding="utf8")
+score_file.write("science : 70\n")
+score_file.write("coding : 100")
