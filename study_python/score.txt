@@ -1,0 +1,4 @@
+math  : 30
+english  : 50
+science : 70
+coding : 100
