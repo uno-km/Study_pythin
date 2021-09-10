@@ -103,7 +103,7 @@ class Wraith(FlyableAttackUnit):
         else:
             print("{0} : 클로킹모드를 설정합니다.".format(self.name))
             self.clocked = True
-
+#커밋
 
 # 드랍십 : 공중유닛, 수송기, 마린/ 파이어뱃/ 탱크등을 수송, 공격은 불가
 # 메딕 : 의무병, 공격기능없음
