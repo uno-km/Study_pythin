@@ -94,7 +94,7 @@ class Wraith(FlyableAttackUnit):
 
     def __init__(self):
         FlyableAttackUnit.__init__("레이스", 80, 20, 5)
-        self.clocked = False  # 클로킹 모드 (해제상태)
+        self.clocked = False  # 클로킹 모드 (해제상태)  
         
     def clocking(self):
         if self.clocked == True:
@@ -105,7 +105,7 @@ class Wraith(FlyableAttackUnit):
             self.clocked = True
 #커밋
 
-# 드랍십 : 공중유닛, 수송기, 마린/ 파이어뱃/ 탱크등을 수송, 공격은 불가
+# 드랍십 : 공중유닛, 수송기, 마린/ 파이어뱃/ 탱크등을 수송, 공격은 불가e
 # 메딕 : 의무병, 공격기능없음
 # 발키리 : 공중 공격유닛 , 한번에 14발 미사일 발사.
 valkyrie = FlyableAttackUnit("valkyrie", 200, 6, 5)
