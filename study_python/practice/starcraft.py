@@ -93,7 +93,7 @@ class FlyableAttackUnit(AttackUnit, Flyable):
 class Wraith(FlyableAttackUnit):
 
     def __init__(self):
-        FlyableAttackUnit.__init__("레이스", 80, 20, 5)
+        FlyableAttackUnit.__init__(self, "레이스", 80, 20, 5)
         self.clocked = False  # 클로킹 모드 (해제상태)  
         
     def clocking(self):
@@ -103,7 +103,8 @@ class Wraith(FlyableAttackUnit):
         else:
             print("{0} : 클로킹모드를 설정합니다.".format(self.name))
             self.clocked = True
-#커밋
+# 커밋
+
 
 # 드랍십 : 공중유닛, 수송기, 마린/ 파이어뱃/ 탱크등을 수송, 공격은 불가e
 # 메딕 : 의무병, 공격기능없음
@@ -112,5 +113,41 @@ valkyrie = FlyableAttackUnit("valkyrie", 200, 6, 5)
 valkyrie.fly(valkyrie.name, "3시")
 # 이전과 똑같이 실행됨을 알 수 있다.
 
+
 # Unit <- AttackUnit <- FlyableAttackInit -> Flyable
 #  
+def game_start():
+    print("[player] in.")
+
+
+def game_over():
+    print("player : GG.");
+    print("[player] out.")
+
+    
+# 실제 게임진행
+game_start()
+m1 = Marine()
+m2 = Marine()
+m3 = Marine()
+
+t1 = Tank()
+t2 = Tank()
+
+w1 = Wraith()
+
+# 유닛일괄 관리
+attatck_units = []
+attatck_units.append(m1)
+attatck_units.append(m2)
+attatck_units.append(m3)
+attatck_units.append(t1)
+attatck_units.append(t2)
+attatck_units.append(w1)
+
+for unit in attatck_units:
+    unit.move("1시")
+    
+# 탱크시즈모드 개발
+Tank.seize_developed = True
+print("[알림] 탱크 시즈모드 개발이 완료되었습니다.")
